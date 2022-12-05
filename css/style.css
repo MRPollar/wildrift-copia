@@ -147,6 +147,8 @@ header .container .login a:hover:nth-child(1) {
 
 section.bg-video {
   position: relative;
+  height: 100.5vh;
+  overflow: hidden;
 }
 section.bg-video video {
   position: absolute;
@@ -159,15 +161,17 @@ section.bg-video video {
   display: block;
   z-index: 1;
 }
-section.bg-video::after {
+section.bg-video::before, section.bg-video::after {
+  position: absolute;
   content: "";
+  z-index: 2;
+}
+section.bg-video::after {
   width: 100%;
   height: 100vh;
-  position: absolute;
   left: 0;
   top: 0;
   background: rgba(0, 0, 0, 0.286);
-  z-index: 2;
 }
 section.bg-video .container {
   max-width: 1020px;
@@ -212,6 +216,44 @@ section.bg-video .container .wild-rift-img-title .disponibilidade img {
   margin: 0 7px;
   width: 135px;
   height: 40px;
+}
+section.bg-video .border-a {
+  position: absolute;
+  width: 100%;
+  height: 0.6rem;
+  background-color: #c89b3c;
+  z-index: 4;
+  left: 0;
+  bottom: 0;
+}
+section.bg-video .border-a::before, section.bg-video .border-a::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+}
+section.bg-video .border-a::before {
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 100%;
+  left: 100%;
+  border: 0.2rem solid #c89b3c;
+}
+section.bg-video .border-a::after {
+  height: 0.4rem;
+  width: 100%;
+  bottom: 0;
+  left: 16%;
+}
+section.bg-video .border-a .border-b {
+  display: block;
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: white;
+  left: 15.6%;
+  transform: rotate(46deg);
+  top: 5.44px;
 }
 
 /*# sourceMappingURL=style.css.map */
