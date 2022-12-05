@@ -1,0 +1,162 @@
+@import 'variables', 'mixins';
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: $font-stack;
+}
+
+html,
+body{
+   height: 100%;
+}
+
+.container{
+   width: 100%;
+   max-width: 1390px;
+   padding: 0 2%;
+   margin: 0 auto;
+}
+
+header{
+   background-color: black;
+   position: fixed;
+   z-index: 1000;
+   width: 100%;
+   left: 0;
+   top: 0;
+   .container{
+      padding: 0 1%;
+      display: flex;
+      row-gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+      .card{
+         cursor: pointer;
+         svg{
+            fill: white;
+         }
+         &:hover{
+            svg{
+               fill: red;
+            }
+         }
+      }
+      .logo{
+         svg{
+            cursor: pointer;
+         }
+      }
+      nav{
+         >ul{
+            display: flex;
+            list-style: none;
+            >li{
+               color: #f9f9f9;
+               padding: 30px 5px;
+               margin: 0 1px;
+               &:last-child{
+                  position: relative;
+                  ul{
+                     display: none;
+                     list-style-type: none;
+                     width: 200px;
+                     padding: 20px 15px;
+                     position: absolute;
+                     background-color: rgb(51, 51, 51);
+                     border-top: 5px solid rgb(0, 214, 255);
+                     top: 82%;
+                     border-radius: 2px;
+                     left: 0;
+                     li{
+                        color: #f9f9f9;
+                        a{
+                           text-decoration: none;
+                           display: block;
+                           color: inherit;
+                           border-radius: 8px;
+                           padding: 7px 15px;
+                           font-size: 13px;
+                           font-weight: bold;
+                           &:hover{
+                              background-color: rgb(128, 128, 128);
+                           }
+                        }
+                     }
+                  }
+                  &:hover{
+                     >a{
+                        &::before{
+                           content: none;
+                        }
+                     }
+                     ul{
+                        display: block;
+                     }
+                  }
+               }
+               >a{
+                  color: inherit;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  font-weight: bold;
+                  font-size: 13px;
+                  padding: 7px 15px;
+                  border-radius: 8px;
+                  position: relative;
+                  letter-spacing: 1px;
+                  path{
+                     fill:#737373;
+                  }
+                  &:hover{
+                     background-color: rgb(51, 51, 51);
+                     &::before{
+                        content: '';
+                        width: 100%;
+                        position: absolute;
+                        height: 5px;
+                        background-color: rgb(0, 214, 255);
+                        left: 0;
+                        bottom: -15px;
+                        border-radius: 5px;
+                     }
+                     path{
+                        fill: #f9f9f9;
+                     }
+                  }
+
+               }
+            }
+         }
+      }
+      .login{
+         color: white;
+         display: flex;
+         align-items: center;
+         justify-content: right;
+         a{
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            padding: 7px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            &:nth-child(2){
+               background-color: rgb(51, 51, 51);
+               margin-left: 6px;
+               padding: 7px 15px;
+            }
+            &:hover{
+               &:nth-child(1){
+                  background-color: rgb(51, 51, 51);
+               }
+            }
+         }
+      }
+   }
+}
+
+@import 'pages/home'
