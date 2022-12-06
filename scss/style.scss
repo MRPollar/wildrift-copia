@@ -1,9 +1,12 @@
 @import 'variables', 'mixins';
+@import url('//db.onlinewebfonts.com/c/494bb34e7a3fad44977e28f7c922fd75?family=GT+America+Compressed+Bold');
+@import url('//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-   font-family: $font-stack;
+   // font-family: $font-stack;
 }
 
 html,
@@ -25,6 +28,7 @@ header{
    width: 100%;
    left: 0;
    top: 0;
+   font-family: $font-sans;
    .container{
       padding: 0 1%;
       display: flex;
@@ -71,6 +75,7 @@ header{
                      li{
                         color: $color-default-white-2;
                         a{
+                           
                            text-decoration: none;
                            display: block;
                            color: inherit;
@@ -159,4 +164,4 @@ header{
    }
 }
 
-@import 'pages/home'
+@import 'pages/home';

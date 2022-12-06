@@ -1,0 +1,10 @@
+@mixin title($color: $font-color-dark) {
+   font-style: italic;
+   text-transform: uppercase;
+   color: $color;
+   font-family: $font-stack;
+   font-size: 40px;
+   font-style: italic;
+   letter-spacing: 2px;
+   margin-bottom: 39px;
+}
