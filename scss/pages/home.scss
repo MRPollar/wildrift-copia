@@ -1,7 +1,6 @@
 section.bg-video{
    position: relative;
-   height: 100%;
-   min-height: 800px;
+   min-height: 47rem;
    overflow: hidden;
    video{
       position: absolute;
@@ -51,8 +50,8 @@ section.bg-video{
             padding: 0 42px;
             text-align: center;
             margin: 0 auto;
-            margin-bottom: 160px;
-            font-size: 16px;
+            margin-bottom: 8rem;
+            font-size: 14px;
             font-style: italic;
             letter-spacing: 2px;
          }
@@ -343,5 +342,35 @@ section.welcome{
 }
 
 @media (max-width: 1024px) {
-   
+   section.bg-video{
+      min-height: 1131px;
+      .container{
+         .wild-rift-img-title{
+            h3{
+               width: 625px;
+               margin: 0 auto 160px auto;
+               font-size: 23px;
+               line-height: 33.04px;
+               padding: 0 2px;
+               text-align: center;
+            }
+            .disponibilidade{
+               flex-wrap: wrap;
+               justify-content: center;
+               align-items: center;
+               h4{
+                  width: 100%;
+                  font-size: 23px;
+                  margin-bottom: 35px;
+                  text-align: center;
+               }
+               img{
+                  margin: 0 7px;
+                  width: 135px;
+                  height: 40px;
+               }
+            }
+         }
+      }
+   }
 }
