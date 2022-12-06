@@ -47,19 +47,19 @@ header .container .card:hover svg {
 header .container .logo svg {
   cursor: pointer;
 }
-header .container nav > ul {
+header .container nav.desktop > ul {
   display: flex;
   list-style: none;
 }
-header .container nav > ul > li {
+header .container nav.desktop > ul > li {
   color: #f9f9f9;
   padding: 30px 5px;
   margin: 0 1px;
 }
-header .container nav > ul > li:last-child {
+header .container nav.desktop > ul > li:last-child {
   position: relative;
 }
-header .container nav > ul > li:last-child ul {
+header .container nav.desktop > ul > li:last-child ul {
   display: none;
   list-style-type: none;
   width: 200px;
@@ -71,10 +71,10 @@ header .container nav > ul > li:last-child ul {
   border-radius: 2px;
   left: 0;
 }
-header .container nav > ul > li:last-child ul li {
+header .container nav.desktop > ul > li:last-child ul li {
   color: #f9f9f9;
 }
-header .container nav > ul > li:last-child ul li a {
+header .container nav.desktop > ul > li:last-child ul li a {
   text-decoration: none;
   display: block;
   color: inherit;
@@ -83,16 +83,16 @@ header .container nav > ul > li:last-child ul li a {
   font-size: 13px;
   font-weight: bold;
 }
-header .container nav > ul > li:last-child ul li a:hover {
+header .container nav.desktop > ul > li:last-child ul li a:hover {
   background-color: rgb(128, 128, 128);
 }
-header .container nav > ul > li:last-child:hover > a::before {
+header .container nav.desktop > ul > li:last-child:hover > a::before {
   content: none;
 }
-header .container nav > ul > li:last-child:hover ul {
+header .container nav.desktop > ul > li:last-child:hover ul {
   display: block;
 }
-header .container nav > ul > li > a {
+header .container nav.desktop > ul > li > a {
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
@@ -103,13 +103,13 @@ header .container nav > ul > li > a {
   position: relative;
   letter-spacing: 1px;
 }
-header .container nav > ul > li > a path {
+header .container nav.desktop > ul > li > a path {
   fill: #737373;
 }
-header .container nav > ul > li > a:hover {
+header .container nav.desktop > ul > li > a:hover {
   background-color: rgb(51, 51, 51);
 }
-header .container nav > ul > li > a:hover::before {
+header .container nav.desktop > ul > li > a:hover::before {
   content: "";
   width: 100%;
   position: absolute;
@@ -119,7 +119,7 @@ header .container nav > ul > li > a:hover::before {
   bottom: -15px;
   border-radius: 5px;
 }
-header .container nav > ul > li > a:hover path {
+header .container nav.desktop > ul > li > a:hover path {
   fill: #f9f9f9;
 }
 header .container .login {
@@ -139,7 +139,7 @@ header .container .login a {
   font-weight: bold;
   letter-spacing: 2px;
 }
-header .container .login a:nth-child(2) {
+header .container .login a.btnLogin {
   background-color: rgb(51, 51, 51);
   margin-left: 6px;
   padding: 7px 15px;
@@ -148,6 +148,17 @@ header .container .login a:hover:nth-child(1) {
   background-color: rgb(51, 51, 51);
 }
 
+@media (max-width: 1024px) {
+  header .container {
+    justify-content: left;
+  }
+  header .container nav.desktop {
+    display: none;
+  }
+  header .container .login {
+    display: none;
+  }
+}
 section.bg-video {
   position: relative;
   height: 100%;

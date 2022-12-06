@@ -51,7 +51,7 @@ header{
             cursor: pointer;
          }
       }
-      nav{
+      nav.desktop{
          >ul{
             display: flex;
             list-style: none;
@@ -149,7 +149,7 @@ header{
             font-size: 12px;
             font-weight: bold;
             letter-spacing: 2px;
-            &:nth-child(2){
+            &.btnLogin{
                background-color: rgb(51, 51, 51);
                margin-left: 6px;
                padding: 7px 15px;
@@ -159,6 +159,20 @@ header{
                   background-color: rgb(51, 51, 51);
                }
             }
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px){
+   header{
+      .container{
+         justify-content: left;
+         nav.desktop{
+            display: none;
+         }
+         .login{
+            display: none;
          }
       }
    }
