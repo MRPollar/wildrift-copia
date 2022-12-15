@@ -1,8 +1,12 @@
+const allLinks = document.querySelectorAll('a');
 const btnToggle = document.getElementById('btnToggle');
 const btnClose = document.getElementById('btnClose');
 const navMenu = document.getElementById('navMenu');
 const iconToggle = document.querySelectorAll('.iconToggle');
 const ocultList = document.querySelectorAll('.ocultList');
+
+const containerSlide = document.getElementById("container_slider");
+const slider = document.getElementById("slider");
 
 btnToggle.addEventListener("click", () => {
    navMenu.style.transition = '.3s';
@@ -26,3 +30,14 @@ iconToggle.forEach(btn => {
       }
    })
 })
+
+allLinks.forEach(link => {
+   link.addEventListener("click", (e) => {
+      e.preventDefault();
+   })
+})
+
+function slideScroll(e){
+   console.log(e)
+}
+containerSlide.addEventListener("touchmove", slideScroll);
